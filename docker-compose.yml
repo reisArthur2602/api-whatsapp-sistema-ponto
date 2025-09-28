@@ -1,0 +1,9 @@
+services:
+  api-whatsapp-sistema-ponto:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "5001:5001"
+    entrypoint: ./entrypoint.sh
+    volumes:
+      - .:/app
